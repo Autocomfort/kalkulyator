@@ -46,11 +46,11 @@ document.addEventListener('DOMContentLoaded', function () {
   designGroupSelect.addEventListener('change', function () {
     const value = this.value;
     let src = '';
-
+    
     switch (value) {
-      case 'single': src = '/images/designs/single.jpg'; break;
-      case 'double': src = '/images/designs/double.jpg'; break;
-      case 'premium': src = '/images/designs/premium.jpg'; break;
+      case 'single': src = 'kalkulyator/images/designs/single.jpg'; break;
+      case 'double': src = 'kalkulyator/images/designs/double.jpg'; break;
+      case 'premium': src = 'kalkulyator/images/designs/premium.jpg'; break;
     }
 
     if (src) designPreviewImg.src = src;
