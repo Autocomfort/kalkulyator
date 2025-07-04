@@ -69,7 +69,7 @@ function updateImage(field, filename, sizeFolder = '') {
   }
 
   const lid = document.getElementById('lid')?.value || 'tape';
-  const pathPrefix = `kalkulyator/images/${lid}/${field}`;
+  const pathPrefix = `/kalkulyator/images/${lid}/${field}`;
 
   const path = sizeFolder
     ? `${pathPrefix}/${sizeFolder}/${filename}`
