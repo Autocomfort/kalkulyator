@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конструктор органайзера</title>
+
+    <!-- стилі -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- SS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="form-container">
+  <div class="preview-container">
+    <img id="size-img" src="" alt="Size">
+    <img id="color-img" src="" alt="Color">
+    <img id="thread-img" src="" alt="Thread">
+    <img id="kant-img" src="" alt="Kant">
+    <img id="lining-img" src="" alt="Lining">
+    <img id="embroidery-img" src="" alt="Embroidery">
+    <img id="badge-img" src="" alt="Badge">
+</div>
+  
+  <div class="tab-wrapper">
+    <div class="tabs">
+      <button class="tab-button active" data-target="standard-form">СТАНДАРТ</button>
+      <button class="tab-button" data-target="premium-form">ПРЕМІУМ</button>
+    </div>
+  
+    <div id="standard-form" class="tab-content active">
+
+           
+          <form id="config-form">
+            <div class="form-row">
+              <label for="size">Розмір:</label>
+                      <select name="size" id="size">
+                      <option value="35">35 см</option>
+                      <option value="50">50 см</option>
+                      <option value="65">65 см</option>
+                      <option value="80">80 см</option>
+                      <option value="100">100 см</option>
+                    </select>        
+            </div>
+            <div class="form-row">
+              <label for="lid">Фіксація кришки:</label>
+                <select name="lid" id="lid">
+                    <option value="tape">На липучці</option>
+                    <option value="magnet">На магнітах (+250-400)</option>
+                </select>      
+            </div>
+            <div class="form-row">
+              <label for="embroidery-select">Вишивка:</label>
+              <select id="standard-embroidery" name="embroidery">
+                <option value="none">без вишивки</option>
+                <option value="acura (акура)">ACURA (акура)</option>
+                <option value="alfa romeo (альфа ромео)">ALFA ROMEO (альфа ромео)</option>
+                <option value="audi (ауді тільки кільця)">AUDI (ауді тільки кільця)</option>
+                <option value="audi (ауді)">AUDI (ауді)</option>
+                <option value="bentley (бентлі)">BENTLEY (бентлі)</option>
+                <option value="bmw (бмв тільки букви)">BMW (бмв тільки букви)</option>
+                <option value="bmw (бмв)">BMW (бмв)</option>
+                <option value="bmw m paket (бмв м пакет)">BMW M PAKET (бмв м пакет)</option>
+                <option value="bmw x5 m paket (бмв м пакет)">BMW X5 M PAKET (бмв м пакет)</option>
+                <option value="cadillac (каділак)">CADILLAC (каділак)</option>
+                <option value="cherry (чері)">CHERRY (чері)</option>
+                <option value="chevrolet (шевроле)">CHEVROLET (шевроле)</option>
+                <option value="chrysler (крайслер)">CHRYSLER (крайслер)</option>
+                <option value="citroen (сітроен)">CITROEN (сітроен)</option>
+                <option value="dacia (дача)">DACIA (дача)</option>
+                <option value="daewoo (деу)">DAEWOO (деу)</option>
+                <option value="daf (даф)">DAF (даф)</option>
+                <option value="dodge (додж)">DODGE (додж)</option>
+                <option value="fiat (фіат)">FIAT (фіат)</option>
+                <option value="ford (форд)">FORD (форд)</option>
+                <option value="geely (джилі)">GEELY (джилі)</option>
+                <option value="haval (хавал)">HAVAL (хавал)</option>
+                <option value="honda (хонда)">HONDA (хонда)</option>
+                <option value="hyundai (хюндай)">HYUNDAI (хюндай)</option>
+                <option value="infiniti (інфініті)">INFINITI (інфініті)</option>
+                <option value="iveco (івеко)">IVECO (івеко)</option>
+                <option value="jaguar (ягуар)">JAGUAR (ягуар)</option>
+                <option value="jeep (джип)">JEEP (джип)</option>
+                <option value="kia (кіа старий лого)">KIA (кіа старий лого)</option>
+                <option value="kia (кіа)">KIA (кіа)</option>
+                <option value="kia cerato (кіа)">KIA CERATO (кіа)</option>
+                <option value="kia sportage (кіа)">KIA SPORTAGE (кіа)</option>
+                <option value="lada (лада)">LADA (лада)</option>
+                <option value="land rover (ленд ровер)">LAND ROVER (ленд ровер)</option>
+                <option value="land rover defender (ленд ровер дефендер)">LAND ROVER DEFENDER (ленд ровер дефендер)</option>
+                <option value="lexus (лексус)">LEXUS (лексус)</option>
+                <option value="lincoln (лінкольн)">LINCOLN (лінкольн)</option>
+                <option value="man (ман)">MAN (ман)</option>
+                <option value="maserati (мазераті)">MASERATI (мазераті)</option>
+                <option value="mazda (мазда)">MAZDA (мазда)</option>
+                <option value="mercedes (мерседес тільки лого)">MERCEDES (мерседес тільки лого)</option>
+                <option value="mercedes (мерседес)">MERCEDES (мерседес)</option>
+                <option value="mercedes amg (мерседес)">MERCEDES AMG (мерседес)</option>
+                <option value="mini cooper (міні купер)">MINI COOPER (міні купер)</option>
+                <option value="mitsubishi (мітсубіші)">MITSUBISHI (мітсубіші)</option>
+                <option value="mustang (мустанг)">MUSTANG (мустанг)</option>
+                <option value="nissan (ніссан)">NISSAN (ніссан)</option>
+                <option value="opel (опель тільки лого)">OPEL (опель тільки лого)</option>
+                <option value="opel (опель)">OPEL (опель)</option>
+                <option value="peugeot (пежо)">PEUGEOT (пежо)</option>
+                <option value="porsche (порше)">PORSCHE (порше)</option>
+                <option value="porsche cayenne (порше)">PORSCHE CAYENNE (порше)</option>
+                <option value="ram (рам)">RAM (рам)</option>
+                <option value="range rover (ренж ровер)">RANGE ROVER (ренж ровер)</option>
+                <option value="renault (рено)">RENAULT (рено)</option>
+                <option value="saab (сааб)">SAAB (сааб)</option>
+                <option value="seat (сіат)">SEAT (сіат)</option>
+                <option value="skoda (шкода)">SKODA (шкода)</option>
+                <option value="smart (смарт)">SMART (смарт)</option>
+                <option value="ssang yong (санг йонг)">SSANG YONG (санг йонг)</option>
+                <option value="subaru (субару)">SUBARU (субару)</option>
+                <option value="subaru forester (субару)">SUBARU FORESTER (субару)</option>
+                <option value="suzuki (сузукі)">SUZUKI (сузукі)</option>
+                <option value="tesla (тесла)">TESLA (тесла)</option>
+                <option value="toyota (тойота)">TOYOTA (тойота)</option>
+                <option value="toyota corolla (тойота)">TOYOTA COROLLA (тойота)</option>
+                <option value="toyota land cruiser (тойота)">TOYOTA LAND CRUISER (тойота)</option>
+                <option value="toyota prado (тойота)">TOYOTA PRADO (тойота)</option>
+                <option value="volkswagen (фольцваген тільки лого)">VOLKSWAGEN (фольцваген тільки лого)</option>
+                <option value="volkswagen (фольцваген)">VOLKSWAGEN (фольцваген)</option>
+                <option value="volkswagen touareg (фольцваген туарег)">VOLKSWAGEN TOUAREG (фольцваген туарег)</option>
+                <option value="volvo (вольво)">VOLVO (вольво)</option>
+                <option value="zeekr (зікр)">ZEEKR (зікр)</option>
+                <option value="герб">ГЕРБ</option>
+                <option value="лев">ЛЕВ</option>
+                <option value="шеврон зсу">Шеврон ЗСУ</option>
+                <option value="індивідуальний">Індивідуальний</option>
+              </select>   
+          </div>
+          <div class="form-row">
+            <label for="badge-select">Металевий лого:</label>
+                    <select id="badge-select">
+                    <option value="none">без лого</option>                    
+                    <option value="acura (акура)">ACURA (акура)</option>
+                    <option value="alfa romeo (альфа ромео)">ALFA ROMEO (альфа ромео)</option>
+                    <option value="audi (ауді)">AUDI (ауді)</option>
+                    <option value="bentley (бентлі)">BENTLEY (бентлі)</option>
+                    <option value="bmw (бмв)">BMW (бмв)</option>
+                    <option value="cadillac (каділак)">CADILLAC (каділак)</option>
+                    <option value="cherry (чері)">CHERRY (чері)</option>
+                    <option value="chevrolet (шевроле)">CHEVROLET (шевроле)</option>
+                    <option value="chrysler (крайслер)">CHRYSLER (крайслер)</option>
+                    <option value="citroen (сітроен)">CITROEN (сітроен)</option>
+                    <option value="dacia (дача)">DACIA (дача)</option>
+                    <option value="daewoo (деу)">DAEWOO (деу)</option>
+                    <option value="daf (даф)">DAF (даф)</option>
+                    <option value="dodge (додж)">DODGE (додж)</option>
+                    <option value="fiat (фіат)">FIAT (фіат)</option>
+                    <option value="ford (форд)">FORD (форд)</option>
+                    <option value="geely (джилі)">GEELY (джилі)</option>
+                    <option value="haval (хавал)">HAVAL (хавал)</option>
+                    <option value="honda (хонда)">HONDA (хонда)</option>
+                    <option value="hyundai (хюндай)">HYUNDAI (хюндай)</option>
+                    <option value="infiniti (інфініті)">INFINITI (інфініті)</option>
+                    <option value="iveco (івеко)">IVECO (івеко)</option>
+                    <option value="jaguar (ягуар)">JAGUAR (ягуар)</option>
+                    <option value="jeep (джип)">JEEP (джип)</option>
+                    <option value="kia (кіа)">KIA (кіа)</option>
+                    <option value="lada (лада)">LADA (лада)</option>
+                    <option value="land rover (ленд ровер)">LAND ROVER (ленд ровер)</option>
+                    <option value="lexus (лексус)">LEXUS (лексус)</option>
+                    <option value="lincoln (лінкольн)">LINCOLN (лінкольн)</option>
+                    <option value="man (ман)">MAN (ман)</option>
+                    <option value="maserati (мазераті)">MASERATI (мазераті)</option>
+                    <option value="mazda (мазда)">MAZDA (мазда)</option>
+                    <option value="mercedes (мерседес)">MERCEDES (мерседес)</option>
+                    <option value="mini cooper (міні купер)">MINI COOPER (міні купер)</option>
+                    <option value="mitsubishi (мітсубіші)">MITSUBISHI (мітсубіші)</option>
+                    <option value="mustang (мустанг)">MUSTANG (мустанг)</option>
+                    <option value="nissan (ніссан)">NISSAN (ніссан)</option>
+                    <option value="opel (опель)">OPEL (опель)</option>
+                    <option value="peugeot (пежо)">PEUGEOT (пежо)</option>
+                    <option value="porsche (порше)">PORSCHE (порше)</option>
+                    <option value="ram (рам)">RAM (рам)</option>
+                    <option value="range rover (ренж ровер)">RANGE ROVER (ренж ровер)</option>
+                    <option value="renault (рено)">RENAULT (рено)</option>
+                    <option value="saab (сааб)">SAAB (сааб)</option>
+                    <option value="seat (сіат)">SEAT (сіат)</option>
+                    <option value="skoda (шкода)">SKODA (шкода)</option>
+                    <option value="smart (смарт)">SMART (смарт)</option>
+                    <option value="ssang yong (санг йонг)">SSANG YONG (санг йонг)</option>
+                    <option value="subaru (субару)">SUBARU (субару)</option>
+                    <option value="suzuki (сузукі)">SUZUKI (сузукі)</option>
+                    <option value="tesla (тесла)">TESLA (тесла)</option>
+                    <option value="toyota (тойота)">TOYOTA (тойота)</option>
+                    <option value="volkswagen (фольцваген)">VOLKSWAGEN (фольцваген)</option>
+                    <option value="volvo (вольво)">VOLVO (вольво)</option>
+                    <option value="zeekr (зікр)">ZEEKR (зікр)</option>
+                   
+                </select>
+          </div>      
+                  <div class="color-group" data-name="color" data-label="Колір матеріалу:">
+                      <input type="hidden" name="color" value="black">
+                      <p class="color-label">Колір матеріалу: <span class="color-text">чорний</span></p>
+                      <div class="color-options">
+                        <button type="button" class="color-option selected" data-value="black" style="background:#000;"></button>
+                        <button type="button" class="color-option" data-value="gray" style="background:#888;"></button>
+                        <button type="button" class="color-option" data-value="brown" style="background:#5b3a29;"></button>
+                        <button type="button" class="color-option" data-value="beige" style="background:#d8c3a5;"></button>
+                        <button type="button" class="color-option" data-value="Cognac" style="background:#eb5910;"></button>
+                        <button type="button" class="color-option" data-value="blue" style="background:#2980b9;"></button>
+                        <button type="button" class="color-option" data-value="red" style="background:#c0392b;"></button>
+                      </div>
+                    </div>              
+              
+      
+              
+                  <div class="color-group" data-name="thread" data-label="Колір нитки:">
+                      <input type="hidden" name="thread" value="black">
+                      <p class="color-label">Колір нитки: <span class="color-text">чорний</span></p>
+                      <div class="color-options">
+                        <button type="button" class="color-option selected" data-value="black" style="background:#000;"></button>
+                        <button type="button" class="color-option" data-value="gray" style="background:#888;"></button>
+                        <button type="button" class="color-option" data-value="brown" style="background:#5b3a29;"></button>
+                        <button type="button" class="color-option" data-value="beige" style="background:#d8c3a5;"></button>
+                        <button type="button" class="color-option" data-value="red" style="background:#c0392b;"></button>
+                        <button type="button" class="color-option" data-value="white" style="background:#fff; border:1px solid #ccc;"></button>
+                        <button type="button" class="color-option" data-value="blue" style="background:#2980b9;"></button>
+                        <button type="button" class="color-option" data-value="orange" style="background:#f39c12;"></button>
+                      </div>
+                    </div>
+                    
+             
+      
+                    <div class="color-group" data-name="kant" data-label="Колір окантовки:">
+                      <input type="hidden" name="kant" value="black">
+                      <p class="color-label">Колір окантовки: <span class="color-text">чорний</span></p>
+                      <div class="color-options">
+                        <button type="button" class="color-option selected" data-value="black" style="background:#000;"></button>
+                        <button type="button" class="color-option" data-value="leather" style="background:#001;"></button>
+                        <button type="button" class="color-option" data-value="gray" style="background:#888;"></button>
+                        <button type="button" class="color-option" data-value="brown" style="background:#5b3a29;"></button>
+                        <button type="button" class="color-option" data-value="beige" style="background:#d8c3a5;"></button>
+                        <button type="button" class="color-option" data-value="red" style="background:#922b20;"></button>                  
+                        <button type="button" class="color-option" data-value="blue" style="background:#2980b9;"></button>                  
+                        <button type="button" class="color-option" data-value="khaky" style="background:#216424;"></button>
+                        <button type="button" class="color-option" data-value="aqua" style="background:#1abc9c;"></button>
+                      </div>
+                    </div>
+                    
+      
+                    <div class="color-group" data-name="lining" data-label="Колір підкладки:">
+                      <input type="hidden" name="lining" value="black">
+                      <p class="color-label">Колір підкладки: <span class="color-text">чорний</span></p>
+                      <div class="color-options">
+                        <button type="button" class="color-option selected" data-value="black" style="background:#000;"></button>
+                        <button type="button" class="color-option" data-value="red" style="background:#c0392b;"></button>
+                        <button type="button" class="color-option" data-value="yellow" style="background:#f1c40f;"></button>
+                        <button type="button" class="color-option" data-value="blue" style="background:#2980b9;"></button>
+                        <button type="button" class="color-option" data-value="aqua" style="background:#1abc9c;"></button>
+                      </div>
+                    </div>
+                    
+                    <input type="hidden" name="utm_source" id="utm_source">
+                    <input type="hidden" name="utm_medium" id="utm_medium">
+                    <input type="hidden" name="utm_campaign" id="utm_campaign">
+                    <input type="hidden" name="utm_term" id="utm_term">
+                    <input type="hidden" name="utm_content" id="utm_content">
+                           
+      
+              
+          </form>
+        
+          <div class="bottom-row">
+            <div class="price-box">
+              <span id="total-price">0</span>&nbsp; грн
+            </div>
+            <div class="button-box">
+              <button id="buy-button">Купити</button>
+            </div>
+          </div>
+      
+        </div>
+    </div>
+  
+    <div id="premium-form" class="tab-content">
+
+      <form id="premium-config-form">
+    
+        <div class="form-row">
+          <label for="size">Розмір:</label>
+          <select id="size" name="size">
+            <option value="50">50 см</option>
+            <option value="60">60 см</option>
+            <option value="70">70 см</option>
+            <option value="80">80 см</option>
+            <option value="90">90 см</option>
+            <option value="100">100 см</option>
+          </select>
+        </div>
+    
+<!-- Преміум Вишивка -->
+<div class="form-row">
+  <label for="premium-embroidery">Вишивка:</label>
+  <select id="premium-embroidery-premium" name="embroidery">
+                <option value="none">без вишивки</option>
+                <option value="acura (акура)">ACURA (акура)</option>
+                <option value="alfa romeo (альфа ромео)">ALFA ROMEO (альфа ромео)</option>
+                <option value="audi (ауді тільки кільця)">AUDI (ауді тільки кільця)</option>
+                <option value="audi (ауді)">AUDI (ауді)</option>
+                <option value="bentley (бентлі)">BENTLEY (бентлі)</option>
+                <option value="bmw (бмв тільки букви)">BMW (бмв тільки букви)</option>
+                <option value="bmw (бмв)">BMW (бмв)</option>
+                <option value="bmw m paket (бмв м пакет)">BMW M PAKET (бмв м пакет)</option>
+                <option value="bmw x5 m paket (бмв м пакет)">BMW X5 M PAKET (бмв м пакет)</option>
+                <option value="cadillac (каділак)">CADILLAC (каділак)</option>
+                <option value="cherry (чері)">CHERRY (чері)</option>
+                <option value="chevrolet (шевроле)">CHEVROLET (шевроле)</option>
+                <option value="chrysler (крайслер)">CHRYSLER (крайслер)</option>
+                <option value="citroen (сітроен)">CITROEN (сітроен)</option>
+                <option value="dacia (дача)">DACIA (дача)</option>
+                <option value="daewoo (деу)">DAEWOO (деу)</option>
+                <option value="daf (даф)">DAF (даф)</option>
+                <option value="dodge (додж)">DODGE (додж)</option>
+                <option value="fiat (фіат)">FIAT (фіат)</option>
+                <option value="ford (форд)">FORD (форд)</option>
+                <option value="geely (джилі)">GEELY (джилі)</option>
+                <option value="haval (хавал)">HAVAL (хавал)</option>
+                <option value="honda (хонда)">HONDA (хонда)</option>
+                <option value="hyundai (хюндай)">HYUNDAI (хюндай)</option>
+                <option value="infiniti (інфініті)">INFINITI (інфініті)</option>
+                <option value="iveco (івеко)">IVECO (івеко)</option>
+                <option value="jaguar (ягуар)">JAGUAR (ягуар)</option>
+                <option value="jeep (джип)">JEEP (джип)</option>
+                <option value="kia (кіа старий лого)">KIA (кіа старий лого)</option>
+                <option value="kia (кіа)">KIA (кіа)</option>
+                <option value="kia cerato (кіа)">KIA CERATO (кіа)</option>
+                <option value="kia sportage (кіа)">KIA SPORTAGE (кіа)</option>
+                <option value="lada (лада)">LADA (лада)</option>
+                <option value="land rover (ленд ровер)">LAND ROVER (ленд ровер)</option>
+                <option value="land rover defender (ленд ровер дефендер)">LAND ROVER DEFENDER (ленд ровер дефендер)</option>
+                <option value="lexus (лексус)">LEXUS (лексус)</option>
+                <option value="lincoln (лінкольн)">LINCOLN (лінкольн)</option>
+                <option value="man (ман)">MAN (ман)</option>
+                <option value="maserati (мазераті)">MASERATI (мазераті)</option>
+                <option value="mazda (мазда)">MAZDA (мазда)</option>
+                <option value="mercedes (мерседес тільки лого)">MERCEDES (мерседес тільки лого)</option>
+                <option value="mercedes (мерседес)">MERCEDES (мерседес)</option>
+                <option value="mercedes amg (мерседес)">MERCEDES AMG (мерседес)</option>
+                <option value="mini cooper (міні купер)">MINI COOPER (міні купер)</option>
+                <option value="mitsubishi (мітсубіші)">MITSUBISHI (мітсубіші)</option>
+                <option value="mustang (мустанг)">MUSTANG (мустанг)</option>
+                <option value="nissan (ніссан)">NISSAN (ніссан)</option>
+                <option value="opel (опель тільки лого)">OPEL (опель тільки лого)</option>
+                <option value="opel (опель)">OPEL (опель)</option>
+                <option value="peugeot (пежо)">PEUGEOT (пежо)</option>
+                <option value="porsche (порше)">PORSCHE (порше)</option>
+                <option value="porsche cayenne (порше)">PORSCHE CAYENNE (порше)</option>
+                <option value="ram (рам)">RAM (рам)</option>
+                <option value="range rover (ренж ровер)">RANGE ROVER (ренж ровер)</option>
+                <option value="renault (рено)">RENAULT (рено)</option>
+                <option value="saab (сааб)">SAAB (сааб)</option>
+                <option value="seat (сіат)">SEAT (сіат)</option>
+                <option value="skoda (шкода)">SKODA (шкода)</option>
+                <option value="smart (смарт)">SMART (смарт)</option>
+                <option value="ssang yong (санг йонг)">SSANG YONG (санг йонг)</option>
+                <option value="subaru (субару)">SUBARU (субару)</option>
+                <option value="subaru forester (субару)">SUBARU FORESTER (субару)</option>
+                <option value="suzuki (сузукі)">SUZUKI (сузукі)</option>
+                <option value="tesla (тесла)">TESLA (тесла)</option>
+                <option value="toyota (тойота)">TOYOTA (тойота)</option>
+                <option value="toyota corolla (тойота)">TOYOTA COROLLA (тойота)</option>
+                <option value="toyota land cruiser (тойота)">TOYOTA LAND CRUISER (тойота)</option>
+                <option value="toyota prado (тойота)">TOYOTA PRADO (тойота)</option>
+                <option value="volkswagen (фольцваген тільки лого)">VOLKSWAGEN (фольцваген тільки лого)</option>
+                <option value="volkswagen (фольцваген)">VOLKSWAGEN (фольцваген)</option>
+                <option value="volkswagen touareg (фольцваген туарег)">VOLKSWAGEN TOUAREG (фольцваген туарег)</option>
+                <option value="volvo (вольво)">VOLVO (вольво)</option>
+                <option value="zeekr (зікр)">ZEEKR (зікр)</option>
+                <option value="герб">ГЕРБ</option>
+                <option value="лев">ЛЕВ</option>
+                <option value="шеврон зсу">Шеврон ЗСУ</option>
+                <option value="індивідуальний">Індивідуальний</option>
+  </select>
+</div>
+
+<!-- Преміум Лого -->
+<div class="form-row">
+  <label for="premium-badge">Металевий лого:</label>
+  <select id="premium-badge" name="badge">
+                    <option value="none">без лого</option>
+                    <option value="big">великий лого +1200</option>
+                    <option value="acura (акура)">ACURA (акура)</option>
+                    <option value="alfa romeo (альфа ромео)">ALFA ROMEO (альфа ромео)</option>
+                    <option value="audi (ауді)">AUDI (ауді)</option>
+                    <option value="bentley (бентлі)">BENTLEY (бентлі)</option>
+                    <option value="bmw (бмв)">BMW (бмв)</option>
+                    <option value="cadillac (каділак)">CADILLAC (каділак)</option>
+                    <option value="cherry (чері)">CHERRY (чері)</option>
+                    <option value="chevrolet (шевроле)">CHEVROLET (шевроле)</option>
+                    <option value="chrysler (крайслер)">CHRYSLER (крайслер)</option>
+                    <option value="citroen (сітроен)">CITROEN (сітроен)</option>
+                    <option value="dacia (дача)">DACIA (дача)</option>
+                    <option value="daewoo (деу)">DAEWOO (деу)</option>
+                    <option value="daf (даф)">DAF (даф)</option>
+                    <option value="dodge (додж)">DODGE (додж)</option>
+                    <option value="fiat (фіат)">FIAT (фіат)</option>
+                    <option value="ford (форд)">FORD (форд)</option>
+                    <option value="geely (джилі)">GEELY (джилі)</option>
+                    <option value="haval (хавал)">HAVAL (хавал)</option>
+                    <option value="honda (хонда)">HONDA (хонда)</option>
+                    <option value="hyundai (хюндай)">HYUNDAI (хюндай)</option>
+                    <option value="infiniti (інфініті)">INFINITI (інфініті)</option>
+                    <option value="iveco (івеко)">IVECO (івеко)</option>
+                    <option value="jaguar (ягуар)">JAGUAR (ягуар)</option>
+                    <option value="jeep (джип)">JEEP (джип)</option>
+                    <option value="kia (кіа)">KIA (кіа)</option>
+                    <option value="lada (лада)">LADA (лада)</option>
+                    <option value="land rover (ленд ровер)">LAND ROVER (ленд ровер)</option>
+                    <option value="lexus (лексус)">LEXUS (лексус)</option>
+                    <option value="lincoln (лінкольн)">LINCOLN (лінкольн)</option>
+                    <option value="man (ман)">MAN (ман)</option>
+                    <option value="maserati (мазераті)">MASERATI (мазераті)</option>
+                    <option value="mazda (мазда)">MAZDA (мазда)</option>
+                    <option value="mercedes (мерседес)">MERCEDES (мерседес)</option>
+                    <option value="mini cooper (міні купер)">MINI COOPER (міні купер)</option>
+                    <option value="mitsubishi (мітсубіші)">MITSUBISHI (мітсубіші)</option>
+                    <option value="mustang (мустанг)">MUSTANG (мустанг)</option>
+                    <option value="nissan (ніссан)">NISSAN (ніссан)</option>
+                    <option value="opel (опель)">OPEL (опель)</option>
+                    <option value="peugeot (пежо)">PEUGEOT (пежо)</option>
+                    <option value="porsche (порше)">PORSCHE (порше)</option>
+                    <option value="ram (рам)">RAM (рам)</option>
+                    <option value="range rover (ренж ровер)">RANGE ROVER (ренж ровер)</option>
+                    <option value="renault (рено)">RENAULT (рено)</option>
+                    <option value="saab (сааб)">SAAB (сааб)</option>
+                    <option value="seat (сіат)">SEAT (сіат)</option>
+                    <option value="skoda (шкода)">SKODA (шкода)</option>
+                    <option value="smart (смарт)">SMART (смарт)</option>
+                    <option value="ssang yong (санг йонг)">SSANG YONG (санг йонг)</option>
+                    <option value="subaru (субару)">SUBARU (субару)</option>
+                    <option value="suzuki (сузукі)">SUZUKI (сузукі)</option>
+                    <option value="tesla (тесла)">TESLA (тесла)</option>
+                    <option value="toyota (тойота)">TOYOTA (тойота)</option>
+                    <option value="volkswagen (фольцваген)">VOLKSWAGEN (фольцваген)</option>
+                    <option value="volvo (вольво)">VOLVO (вольво)</option>
+                    <option value="zeekr (зікр)">ZEEKR (зікр)</option>
+  </select>
+</div>
+
+    
+        <div class="form-row">
+          <label for="design-group">Дизайн:</label>
+          <div class="design-wrapper">
+            <select id="design-group" name="design-group">
+              <option value="single">Однолінійний</option>
+              <option value="double">Дволінійний</option>
+              <option value="premium">Преміум</option>
+            </select>
+            <select id="design-number" name="design-number"></select>
+          </div>
+        </div>
+
+
+        
+        <div class="design-preview">
+          <img id="design-preview-img" src="/images/designs/single.jpg" alt="Приклад дизайну">
+        </div>
+        
+          
+          <div id="design-images" style="margin-top: 10px;">
+            <img src="/images/designs/single.jpg" id="img-single" style="display:none; width:100%; border-radius:6px;">
+            <img src="/images/designs/double.jpg" id="img-double" style="display:none; width:100%; border-radius:6px;">
+            <img src="/images/designs/premium.jpg" id="img-premium" style="display:none; width:100%; border-radius:6px;">
+          </div>
+          <div class="color-group" data-name="color" data-label="Колір матеріалу:">
+            <input type="hidden" name="color" value="black">
+            <p class="color-label">Колір матеріалу: <span class="color-text">чорний</span></p>
+            <div class="color-options">
+              <button type="button" class="color-option selected" data-value="black" style="background:#000;"></button>
+              <button type="button" class="color-option" data-value="gray" style="background:#888;"></button>
+              <button type="button" class="color-option" data-value="brown" style="background:#5b3a29;"></button>
+              <button type="button" class="color-option" data-value="beige" style="background:#d8c3a5;"></button>
+              <button type="button" class="color-option" data-value="Cognac" style="background:#eb5910;"></button>
+              <button type="button" class="color-option" data-value="blue" style="background:#2980b9;"></button>
+              <button type="button" class="color-option" data-value="red" style="background:#c0392b;"></button>
+            </div>
+          </div>              
+    
+  
+    
+        <div class="color-group" data-name="thread" data-label="Колір нитки:">
+            <input type="hidden" name="thread" value="black">
+            <p class="color-label">Колір нитки: <span class="color-text">чорний</span></p>
+            <div class="color-options">
+              <button type="button" class="color-option selected" data-value="black" style="background:#000;"></button>
+              <button type="button" class="color-option" data-value="gray" style="background:#888;"></button>
+              <button type="button" class="color-option" data-value="brown" style="background:#5b3a29;"></button>
+              <button type="button" class="color-option" data-value="beige" style="background:#d8c3a5;"></button>
+              <button type="button" class="color-option" data-value="red" style="background:#c0392b;"></button>
+              <button type="button" class="color-option" data-value="white" style="background:#fff; border:1px solid #ccc;"></button>
+              <button type="button" class="color-option" data-value="blue" style="background:#2980b9;"></button>
+              <button type="button" class="color-option" data-value="orange" style="background:#f39c12;"></button>
+            </div>
+          </div>
+          
+   
+  
+          <div class="color-group" data-name="kant" data-label="Колір окантовки:">
+            <input type="hidden" name="kant" value="black">
+            <p class="color-label">Колір окантовки: <span class="color-text">чорний</span></p>
+            <div class="color-options">
+              <button type="button" class="color-option selected" data-value="black" style="background:#000;"></button>
+              <button type="button" class="color-option" data-value="leather" style="background:#001;"></button>
+              <button type="button" class="color-option" data-value="gray" style="background:#888;"></button>
+              <button type="button" class="color-option" data-value="brown" style="background:#5b3a29;"></button>
+              <button type="button" class="color-option" data-value="beige" style="background:#d8c3a5;"></button>
+              <button type="button" class="color-option" data-value="red" style="background:#922b20;"></button>                  
+              <button type="button" class="color-option" data-value="blue" style="background:#2980b9;"></button>                  
+              <button type="button" class="color-option" data-value="khaky" style="background:#216424;"></button>
+              <button type="button" class="color-option" data-value="aqua" style="background:#1abc9c;"></button>
+            </div>
+          </div>
+          
+  
+          <div class="color-group" data-name="lining" data-label="Колір підкладки:">
+            <input type="hidden" name="lining" value="black">
+            <p class="color-label">Колір підкладки: <span class="color-text">чорний</span></p>
+            <div class="color-options">
+              <button type="button" class="color-option selected" data-value="black" style="background:#000;"></button>
+              <button type="button" class="color-option" data-value="red" style="background:#c0392b;"></button>
+              <button type="button" class="color-option" data-value="yellow" style="background:#f1c40f;"></button>
+              <button type="button" class="color-option" data-value="blue" style="background:#2980b9;"></button>
+              <button type="button" class="color-option" data-value="aqua" style="background:#1abc9c;"></button>
+            </div>
+          </div>
+      
+          <div class="form-row">
+            <label for="pockets">Кармани:</label>
+            <select id="pockets" name="pockets">
+              <option value="0">без карманів</option>
+              <option value="1">1 карман</option>
+              <option value="2">2 кармани</option>
+              <option value="3">3 кармани</option>
+              <option value="4">4 кармани</option>
+            </select>
+          </div>
+      
+          <div class="form-row">
+            <label for="velcro">Липучки:</label>
+            <select id="velcro" name="velcro">
+              <option value="no">без липучок</option>
+              <option value="yes">з липучками</option>
+            </select>
+          </div>
+      
+          <div class="bottom-row">
+            <div class="price-box">
+              <span id="premium-price">0</span>&nbsp; грн
+            </div>
+            <div class="button-box">
+              <button type="button" id="buy-premium">Купити</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+        </div>
+   
+    
+ 
+    
+    <!-- Модальна форма замовлення -->
+    <div id="order-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close-modal">&times;</span>
+        <h3>Оформлення замовлення</h3>
+    
+        <div id="selected-options" style="font-size:14px; margin-bottom: 15px;"></div>
+    
+        <label>
+          <input type="text" id="customer-name" placeholder="Введіть ім’я">
+        </label>
+        <label>
+          <input type="tel" id="customer-phone" placeholder="Введіть телефон">
+        </label>
+        <button type="button" class="submit-button" onclick="submitOrder()">Надіслати</button>
+      </div>
+    </div>
+
+<!-- Модальне вікно подяки -->
+<div id="thank-you-modal" class="modal">
+  <div class="modal-content modal-thank-you">
+    <p>Дякуємо, ми зв'яжемось з вами в найближчий час</p>
+  </div>
+</div>
+
+    
+  </div>
+    <!-- Скрипти -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="script.js"></script>
+    <script src="premium.js"></script>
+</body>
+
+</html>

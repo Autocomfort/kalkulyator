@@ -1,0 +1,343 @@
+
+
+.preview-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3; /* або 1 / 1, якщо квадратне фото */
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+
+.preview-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+
+.form-container {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*блок з кнопками кольору органайзера*/
+.color-group {
+    margin-bottom: 20px;
+  }
+  
+  .color-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .color-text {
+    font-weight: normal;
+    color: #666;
+  }
+  
+  .color-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border 0.3s;
+  }
+  
+  .color-option.selected {
+    border: 2px solid green;
+    box-shadow: 0 0 0 2px #fff inset;
+  }
+  
+/*селекти*/
+/* Базовий стиль для звичайних <select> */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.form-row label {
+  width: 40%;
+  max-width: 40%;
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: left;
+  box-sizing: border-box;
+  padding-right: 10px;
+}
+
+.form-row select,
+.form-row .select2-container {
+  width: 60% !important;
+  max-width: 60%;
+  font-size: 15px;
+  height: 40px;
+  box-sizing: border-box;
+}
+.select2-container .select2-selection--single {
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 5px 10px !important;
+  box-sizing: border-box !important;
+  font-size: 15px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.select2-selection__rendered {
+  padding-left: 0 !important;
+  font-size: 15px !important;
+}
+
+.select2-selection__arrow {
+  height: 100% !important;
+}
+/* ціна + кнопка купити */
+.bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* ← це головне */
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+.price-box {
+  width: 50%;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1; /* або 1.2 — не перебільшуй */
+  white-space: normal;
+  word-break: break-word;
+  display: flex;
+  align-items: center; /* ← вирівнює текст по центру висоти */
+  text-transform: uppercase;
+  font-size: clamp(20px, 2.5vw, 24px);
+}
+
+
+
+.button-box {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.button-box button {
+  width: 100%;
+  max-width: 100%;
+  height: 40px;
+  font-size: 16px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  box-sizing: border-box;
+  text-transform: uppercase;
+
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.show {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background-color: #fff;
+  width: 90%;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+}
+
+.modal-thank-you {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 22px;
+  color: #888;
+  cursor: pointer;
+}
+.close:hover {
+  color: #000;
+}
+
+.tab-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Вкладки */
+.tabs {
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+
+/* Кнопки вкладок */
+.tab-button {
+  flex: 1;
+  padding: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #eaeaea;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  border-radius: 0;
+  margin: 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  position: relative;
+  z-index: 1;
+}
+
+/* Ліва кнопка — заокруглення тільки ліворуч */
+.tab-button:first-child {
+  border-radius: 8px 0 0 0;
+}
+
+/* Права кнопка — заокруглення тільки праворуч */
+.tab-button:last-child {
+  border-radius: 0 8px 0 0;
+}
+
+/* Активна — вище за контент, накриває верх */
+.tab-button.active {
+  background-color: #f9f9f9;
+  z-index: 3;
+  border-bottom: 1px solid #f9f9f9; /* приховує нижню межу */
+}
+
+/* Контент вкладки */
+.tab-content {
+  display: none;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+/* Показати активний контент */
+.tab-content.active {
+  display: block;
+}
+
+/* Вирівнювання форми */
+.design-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.design-row label {
+  flex: 0 0 40%;
+}
+
+.design-wrapper {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.design-wrapper select {
+  height: 36px;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Назва дизайну (ліва частина) — більше місця, більший шрифт */
+#design-group {
+  flex: 3;
+  font-size: 16px;
+}
+
+/* Номер дизайну (права частина) — менше місця, менший шрифт */
+#design-number {
+  flex: 1;
+  font-size: 13px;
+}
+.design-preview {
+  max-height: 500px;
+}
+.design-preview img{
+  max-height: 500px;
+}
+#premium-embroidery.select2-hidden-accessible + .select2-container {
+  width: 100% !important;
+}
