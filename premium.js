@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (badge === 'big') {
       basePrice += 1200;
     } else if (badge && badge !== 'none') {
-      basePrice += 200;
+      basePrice += 250;
     }
     
 
