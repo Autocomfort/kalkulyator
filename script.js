@@ -120,7 +120,7 @@ function calculatePrice() {
   }
 
   if (badgeVal && badgeVal !== 'none') {
-    price += 200;
+    price += 250;
   }
 
   if (lid === 'magnet') {
