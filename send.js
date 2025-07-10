@@ -32,7 +32,7 @@ function submitOrder() {
   const submitButton = document.querySelector(".submit-button");
   submitButton.disabled = true;
   submitButton.textContent = "Надсилається...";
-
+  console.log("Дані до CRM:", data);
   fetch("https://crm.sitniks.com/open-api/orders", {
     method: "POST",
     headers: {
