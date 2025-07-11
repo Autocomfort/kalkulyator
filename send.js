@@ -33,20 +33,28 @@ function submitOrder() {
   submitButton.disabled = true;
   submitButton.textContent = "Надсилається...";
   console.log("Дані до CRM:", data);
-  fetch('https://kalkulyator.great-site.net/send.php', {
+  fetch('https://autocomfort.infinityfreeapp.com/send.php', {
     method: 'POST',
-    body: new URLSearchParams({
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
       name: name,
       phone: phone,
       comment: comment
     })
   })
-  .then(response => response.json())
-  .then(data => {
-    alert('Заявку надіслано!');
+  .then(response => {
+    if (response.ok) {
+      alert("Дякуємо! Заявку надіслано.");
+      document.getElementById("order-modal").style.display = "none";
+    } else {
+      alert("Помилка при надсиланні.");
+    }
   })
   .catch(error => {
-    alert('Помилка надсилання: ' + error.message);
+    console.error("Помилка:", error);
+    alert("Не вдалося надіслати замовлення.");
   })
   .finally(() => {
     submitButton.disabled = false;
