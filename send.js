@@ -33,25 +33,20 @@ function submitOrder() {
   submitButton.disabled = true;
   submitButton.textContent = "Надсилається...";
   console.log("Дані до CRM:", data);
-  fetch("https://crm.sitniks.com/open-api/orders", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": "Bearer X2AZUwxc7GDmlWuEAUCNHGHFTdlVdtlKWwLLkEKyiIa" 
-    },
-    body: JSON.stringify(data)
+  fetch('https://kalkulyator.great-site.net/send.php', {
+    method: 'POST',
+    body: new URLSearchParams({
+      name: name,
+      phone: phone,
+      comment: comment
+    })
   })
-  .then(response => {
-    if (response.ok) {
-      alert("✅ Дякуємо! Заявку надіслано.");
-      document.getElementById("order-modal").style.display = "none";
-    } else {
-      alert("❌ Помилка при надсиланні заявки.");
-    }
+  .then(response => response.json())
+  .then(data => {
+    alert('Заявку надіслано!');
   })
   .catch(error => {
-    console.error("❌ Помилка:", error);
-    alert("⚠️ Не вдалося надіслати замовлення.");
+    alert('Помилка надсилання: ' + error.message);
   })
   .finally(() => {
     submitButton.disabled = false;
