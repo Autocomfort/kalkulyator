@@ -33,7 +33,7 @@ function submitOrder() {
   submitButton.disabled = true;
   submitButton.textContent = "Надсилається...";
   console.log("Дані до CRM:", data);
-  fetch('https://autocomfort.infinityfreeapp.com/send.php', {
+  fetch('https://autocomfort.github.io/kalkulyator/send.php', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
